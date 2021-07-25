@@ -13,14 +13,14 @@ public class CabInvoiceGenerator
 		return Math.max(MINIMUM_FARE, fare); 
 	}
 
-	public double calculateTotalFare(Ride[] rides) 
+	public InvoiceSummary calculateTotalFare(Ride[] rides) 
 	{
 		double totalFare = 0;
 		for (Ride ride : rides) 
 		{
 			totalFare+=getfare(ride.distance, ride.time);
 		}
-		return totalFare;
+		return new InvoiceSummary(rides.length, totalFare);
 	}
 	
 }
