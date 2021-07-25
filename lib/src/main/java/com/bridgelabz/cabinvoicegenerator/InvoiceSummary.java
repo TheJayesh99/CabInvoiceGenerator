@@ -1,19 +1,19 @@
 package com.bridgelabz.cabinvoicegenerator;
 
-
-
-public class InvoiceSummary {
+public class InvoiceSummary 
+{
+	public int userID;
 	public int numberOfRides;
 	public double totalFare;
 	public double avarage;
-	public InvoiceSummary(int numberOfRides, double totalFare) 
+	public InvoiceSummary(int userid ,int numberOfRides, double totalFare) 
 	{
 		super();
 		this.numberOfRides = numberOfRides;
 		this.totalFare = totalFare;
 		this.avarage = this.totalFare/this.totalFare;
 	}
-	
+
 	@Override
 	public String toString() 
 	{
@@ -36,5 +36,5 @@ public class InvoiceSummary {
 				&& Double.doubleToLongBits(totalFare) == Double.doubleToLongBits(other.totalFare);
 	}
 
-	
+
 }
