@@ -37,4 +37,6 @@ public class CabInvoiceGeneratorTest
 		double totalfare =  cabInvoiceGenerator.calculateTotalFare(rides);
 		assertEquals(57, totalfare,0.0);
 	}
+	
+
 }
